@@ -1,6 +1,14 @@
 version: "3"
 
 services:
+  webapp:
+    build: ./webapp
+    environment:
+      - "PORT=80"
+      - "UPLOADS_DIR=/uploads"
+      - "CONVERTER_URL=http://converter/unoconv/pdf"
+    depends_on:
+      - converter
   converter:
     image: zrrrzzt/docker-unoconv-webservice
     environment:
