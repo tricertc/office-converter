@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  converter:
+    image: zrrrzzt/docker-unoconv-webservice
+    environment:
+      - "SERVER_PORT=80"
+    ports:
+      - "8081:80"
