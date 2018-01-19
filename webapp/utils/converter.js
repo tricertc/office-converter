@@ -1,7 +1,6 @@
 const request = require('request');
 const config = require('../config');
 const uuid = require('uuid/v1');
-const str = require('string-to-stream');
 const path = require('path');
 const fs = require('fs');
 
