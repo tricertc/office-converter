@@ -7,8 +7,13 @@ services:
       - "PORT=80"
       - "UPLOADS_DIR=/uploads"
       - "CONVERTER_URL=http://converter/unoconv/pdf"
+    ports:
+      - "8080:80"
+    volumes:
+      - "./webapp:/src/app"
     depends_on:
       - converter
+
   converter:
     image: zrrrzzt/docker-unoconv-webservice
     environment:

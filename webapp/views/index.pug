@@ -1,5 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Office-to-Pdf Converter
+  form(method="POST", action="/convert", enctype="multipart/form-data")
+    input(type="file", name="document")
+    button(type="submit") Process
